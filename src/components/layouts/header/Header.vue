@@ -8,7 +8,7 @@
                     style="font-family: 'Alata', sans-serif;"
                     v-bind:style="{ cursor: 'pointer' }"
                 >
-                    ANIMEINFO
+                    OTAKU-INFO
                 </h1>
             </div>
             <div v-for="(route, index) in routes" v-bind:key="index" class="align-self-end">
