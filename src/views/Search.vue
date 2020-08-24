@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="d-flex flex-row justify-content-center mt-5 mb-4">
+        <div class="d-flex flex-row mt-5 mb-4">
             <SelectInput2
                 v-bind:optionsData="selectField"
                 v-bind:defaultData="data"
@@ -14,13 +14,13 @@
                         <MapCard class="m-3" v-bind:data="search" />
                     </div>
                 </div>
-                <div
-                    class="my-3 py-3 offset-5 col-2 offset-5 font-weight-bold"
+                <button
+                    class="btn btn-md btn-light my-3 py-3 font-weight-bold"
                     @click="_loadMoreSearches"
                     v-bind:style="{ cursor: 'pointer' }"
                 >
                     Load More
-                </div>
+                </button>
             </div>
         </b-row>
     </div>
@@ -50,8 +50,6 @@ export default {
         ...mapActions(["fetchSearch", "loadMoreSearches"]),
         async searchData(data) {
             this.data = data;
-            this.$router.push(`/search?type=${data.option}&input=${data.input}`);
-
             await this.fetchSearch(data);
         },
         async _loadMoreSearches() {

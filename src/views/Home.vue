@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="d-flex flex-row mt-5 mb-4">
+        <div class="d-flex flex-row mb-4">
             <div class="align-self-center">
                 <h1
                     class="m-0 h3"
@@ -11,14 +11,14 @@
                 </h1>
             </div>
         </div>
-        <div v-bind:style="{ overflowX: 'scroll' }">
+        <div class="mb-4" v-bind:style="{ overflowX: 'scroll' }">
             <div class="d-flex flex-row">
-                <div class="anime" v-for="anime in animes" :key="anime.mal_id">
+                <div class="my-2 mx-3" v-for="anime in animes" :key="anime.mal_id">
                     <MapCard v-bind:data="anime" />
                 </div>
             </div>
         </div>
-        <div class="d-flex flex-row mt-3">
+        <div class="d-flex flex-row mb-4">
             <div class="align-self-center">
                 <h1
                     class="m-0 h3"
@@ -29,9 +29,9 @@
                 </h1>
             </div>
         </div>
-        <div v-bind:style="{ overflowX: 'scroll' }">
+        <div class="mb-4" v-bind:style="{ overflowX: 'scroll' }">
             <div class="d-flex flex-row">
-                <div class="anime" v-for="manga in mangas" :key="manga.mal_id">
+                <div class="my-2 mx-3" v-for="manga in mangas" :key="manga.mal_id">
                     <MapCard v-bind:data="manga" />
                 </div>
             </div>
@@ -91,12 +91,4 @@ export default {
 };
 </script>
 
-<style scoped>
-* {
-    outline-color: gold;
-    outline-offset: -1;
-}
-.anime {
-    margin: 10px 20px;
-}
-</style>
+<style scoped></style>

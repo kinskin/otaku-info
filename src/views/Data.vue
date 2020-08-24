@@ -115,10 +115,9 @@ export default {
 </script>
 
 <style scoped>
-/* * {
-    outline: 1px solid gold;
-    outline-offset: -1px;
-} */
+* {
+    color: white;
+}
 
 .embed-container {
     position: relative;

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="d-flex flex-row justify-content-center mt-5 mb-4">
+        <div class="d-flex flex-row my-3">
             <div class="mx-3">
                 <button
                     id="top"
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div v-if="genre" v-bind:style="{ width: '100%' }">
-                <div class="form-group offset-4 col-4 offset-4 my-3">
+                <div class="form-group col-4 sm-12 my-3">
                     <select
                         class="form-control"
                         id="exampleFormControlSelect1"
@@ -60,13 +60,13 @@
                                 <MapCard v-bind:data="manga" />
                             </div>
                         </div>
-                        <div
-                            class="my-3 py-3 offset-5 col-2 offset-5 font-weight-bold"
+                        <button
+                            class="btn btn-md btn-light my-3 py-3 font-weight-bold"
                             @click="_loadMoreGenreManga"
                             v-bind:style="{ cursor: 'pointer' }"
                         >
                             Load More
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>

@@ -41,11 +41,13 @@ export default {
     },
     methods: {
         formSubmit() {
-            const data = {
-                input: this.input,
-                option: this.option,
-            };
-            this.$emit("form-data", data);
+            if (this.input && this.option) {
+                const data = {
+                    input: this.input,
+                    option: this.option,
+                };
+                this.$emit("form-data", data);
+            }
         },
         handleChange(e) {
             this.option = e.target.value;

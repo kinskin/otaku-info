@@ -2,8 +2,9 @@
     <div id="app">
         <div class="container-fluid">
             <Header />
-            <!-- <router-link to="/">Home</router-link> -->
-            <router-view />
+            <div class="mt-5">
+                <router-view />
+            </div>
         </div>
     </div>
 </template>
@@ -25,6 +26,9 @@ export default {
 
 <style>
 body {
+    /* background-image: url("./assets/thousandsunny.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
     background-color: black;
 }
 #app {
